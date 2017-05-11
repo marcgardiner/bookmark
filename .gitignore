@@ -4,7 +4,10 @@
 # projects
 *.sqlite3
 
+# intermediate
+*.pyc
+*.swp
+
 # migration and static
 /account/migrations/
 /media/
-
