@@ -1,0 +1,16 @@
+# virtual env
+/denv/
+/dist/
+/build/
+
+# ide
+/.idea/
+
+# intermediate files
+/*.pyc
+
+# projects
+
+/*.db
+/*.sqlite3
+
