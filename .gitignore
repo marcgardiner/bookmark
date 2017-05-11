@@ -9,7 +9,9 @@
 *.swp
 
 # projects
-
 *.db
 *.sqlite3
+
+/account/migrations/
+/media/
 
