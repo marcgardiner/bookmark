@@ -1,17 +1,10 @@
-# virtual env
-/denv/
-/dist/
-/build/
-
 # Misc
 /.idea/
-*.pyc
-*.swp
 
 # projects
-*.db
 *.sqlite3
 
+# migration and static
 /account/migrations/
 /media/
 
