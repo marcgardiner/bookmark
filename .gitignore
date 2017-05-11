@@ -3,14 +3,13 @@
 /dist/
 /build/
 
-# ide
+# Misc
 /.idea/
-
-# intermediate files
-/*.pyc
+*.pyc
+*.swp
 
 # projects
 
-/*.db
-/*.sqlite3
+*.db
+*.sqlite3
 
