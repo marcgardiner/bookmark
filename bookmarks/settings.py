@@ -27,13 +27,15 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+ABSOLUTE_URL_OVERRIDES = {
+    'auth.user': lambda u: reverse_lazy('user_detail', args=[u.username])
+}
 
 # Application definition
 
 INSTALLED_APPS = (
     'account',
     'images',
-    'sorl.thumbnail',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -41,6 +43,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'social.apps.django_app.default',
+    'sorl.thumbnail',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -136,4 +139,4 @@ SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = ''
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = ''
 
 # sorl thumbnail
-# THUMBNAIL_DEBUG = True
+THUMBNAIL_DEBUG = False

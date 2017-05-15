@@ -21,4 +21,6 @@ urlpatterns = [
         'django.contrib.auth.views.password_reset_confirm',
         name='password_reset_confirm'),
     url(r'^password-reset/complete/$', 'django.contrib.auth.views.password_reset_complete', name='password_reset_complete'),
+    url(r'^users/$', views.user_list, name='user_list'),
+    url(r'^users/(?P<username>[-\w]+)/$', views.user_detail, name='user_detail'),
 ]
