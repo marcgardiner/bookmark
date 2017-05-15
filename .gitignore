@@ -9,6 +9,7 @@
 *.swp
 
 # migration and static
+/actions/migrations
 /account/migrations/
 /images/migrations
 /media/
