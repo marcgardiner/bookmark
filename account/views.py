@@ -12,7 +12,6 @@ from .forms import LoginForm, UserRegistrationForm, UserEditForm, ProfileEditFor
 from .models import Profile, Contact
 from actions.models import Action
 
-
 def user_login(request):
     if request.method == 'POST':
         form = LoginForm(request.POST)
@@ -37,7 +36,7 @@ def dashboard(request):
     actions = Action.objects.exclude(user=request.user)
     following_ids = request.user.following.values_list('id', flat=True)
     if following_ids:
-        actions = actions.filter(user_id__in=following_ids)
+        actions = actions.filter(user_id__in=following_ids).select_related('user', 'user__profile')
     actions = actions[:10]
     return render(request,
                   'account/dashboard.html',
