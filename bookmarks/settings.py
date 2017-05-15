@@ -141,3 +141,8 @@ SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = ''
 
 # sorl thumbnail
 THUMBNAIL_DEBUG = False
+
+# Redis connection configuration
+REDIS_HOST = 'localhost'
+REDIS_PORT = 6379
+REDIS_DB = 0
